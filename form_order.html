@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Book the Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Book The Book</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Уведомления</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="orders.html">Мои книги</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-2">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Вход</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Регистрация</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <form class="d-flex" name="search">
+                    <input class="form-control me-2" type="search" placeholder="Название" aria-label="Название">
+                    <button class="btn btn-outline-light" type="button">Поиск</button>
+                </form>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active nav-sub" aria-current="page" href="#">Жанры</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav-sub" aria-current="page" href="#">Популярное</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active nav-sub" aria-current="page" href="#">Новинки</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav me-2">
+                <li class="nav-item">
+                    <a class="nav-link active nav-sub" aria-current="page" href="#">О компании</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <p class="text-left">
+                <p class="page-header">
+                    Оформление заказа
+                </p>
+                </p>
+                <p class="text-right book-genre">ЖАНР</p>
+                <div class="card-order">
+                    <img src="img/ana sheri.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-title book-author">Автор</p>
+                        <h4 class="card-text book-title">Название книги</h4>
+                        <h4 class="card-text book-price">Цена ₽</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <br>
+                <div class="card-header card-header-order">
+                    Заказ #99237238
+                </div>
+                <form name="order-form" id="order-form">
+                    <div class="card">
+                        <div class="form-group">
+                            <label for="formGroupInputSurname">Фамилия*</label>
+                            <input type="text" class="form-control" name="formGroupInputSurname"
+                                placeholder="Введите фамилию получателя...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupInputName">Имя*</label>
+                            <input type="text" class="form-control" name="formGroupInputName"
+                                placeholder="Введите имя получателя...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupInputMiddlename">Отчество</label>
+                            <input type="text" class="form-control" name="formGroupInputMiddlename"
+                                placeholder="Введите фамилию получателя...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupInputStreet">Улица*</label>
+                            <input type="text" class="form-control" name="formGroupInputStreet"
+                                placeholder="Введите название улицы...">
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Регион*</label>
+                            <select class="form-control" name="form-control-region" id="form-control-region">
+                                <option value="Не выбрано">Не выбрано</option>
+                                <option value="Регион1">Регион1</option>
+                                <option value="Регион2">Регион2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Населенный пункт*</label>
+                            <select class="form-control" name="form-control-punkt" id="form-control-punkt">
+                                <option value="Не выбрано">Не выбрано</option>
+                                <option value="Населенный пункт1">Населенный пункт1</option>
+                                <option value="Населенный пункт2">Населенный пункт2</option>
+                            </select>
+                        </div>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="formGroupInputHouseNumber">Дом*</label>
+                                    <input type="text" class="form-control" name="formGroupInputHouseNumber" id="formGroupInputHouseNumber"
+                                        placeholder="Введите номер дома..">
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-group">
+                                    <label for="formGroupInputApartmentNumber">Квартира*</label>
+                                    <input type="text" class="form-control"  name="formGroupInputApartmentNumber" id="formGroupInputApartmentNumber"
+                                        placeholder="Введите номер квартиры..">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupInputPhoneNumber">Номер телефона*</label>
+                            <input type="text" class="form-control" name="formGroupInputPhoneNumber"
+                                placeholder="Введите номер телефона...">
+                        </div>
+                    </div>
+                    <button class="btn" type="submit" id="submitButton">Перейти к оплате</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-left text-lg-start">
+        <div class="text-left p-3">
+            © Book The Book 2021
+        </div>
+    </footer>
+    <script src="site.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+</body>
+
+</html>
